@@ -1,0 +1,6 @@
+*.exe
+*.csv
+.vscode
+__pycache__
+venv
+build
