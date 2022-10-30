@@ -1,6 +1,6 @@
 # tugas2-el4121
 
-![sim.png](https://github.com/ubbeg2000/tugas2-el4121/blob/main/sim.png?raw=true)
+![sim.JPG](https://github.com/ubbeg2000/tugas2-el4121/blob/main/sim.png?raw=true)
 
 Repository yang berisikan source code untuk tugas 2 mata kuliah EL4121 Perancangan Sistem Embedded. Pada tugas ini, mahasiswa diminta untuk membuat simulasi HIL dari sistem pengendali pintu geser dengan menerapkan supervisory control. Simulasi dilakukan dengan menggunakan esp32 yang berperan sebagai pengendali dan program python yang berperan sebagai plant (motor). esp32 diprogram menggunakan ESP-IDF. Video demonstrasi tugas dapat dilihat di [sini](https://www.youtube.com/watch?v=FajcCW099rw).
 
