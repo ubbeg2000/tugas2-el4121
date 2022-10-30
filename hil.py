@@ -8,6 +8,7 @@ SIM_WINDOW_WIDTH = 1000
 SIM_DURATION = 10000
 SIM_LOG_FILE_NAME = "hil_log.csv"
 SIM_PORT = "COM8"
+SIM_REFRESH_RATE = 50
 
 # command line argument parsing
 if len(sys.argv) == 2:
@@ -114,7 +115,7 @@ while i < SIM_DURATION:
             input_open_data = input_open_data[-SIM_WINDOW_WIDTH:]
             input_close_data = input_close_data[-SIM_WINDOW_WIDTH:]
 
-        if i % 50 == 0:
+        if i % SIM_REFRESH_RATE == 0:
             draw(fig, speed_plot, speed_data, position_plot, position_data,
                  setpoint_data, input_open_data, input_close_data)
 
