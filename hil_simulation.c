@@ -6,7 +6,7 @@
 
 int main()
 {
-    FILE *f = fopen("system_simulation.csv", "w");
+    FILE *f = fopen("hil_simulation.csv", "w");
 
     // FSM VARIABLES
     int state = DOOR_OPEN, input_open = 1, input_close = 0, cnt = 0;

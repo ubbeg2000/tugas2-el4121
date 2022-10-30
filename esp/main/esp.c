@@ -50,9 +50,6 @@ void control_task(void *pvParam)
         }
 
         xTaskDelayUntil(&xLastWakeTime, xDelay);
-        // vTaskDelay(100 / portTICK_PERIOD_MS);
-
-        // vTaskDelay(TS * 1000 / portTICK_PERIOD_MS);
     }
 }
 

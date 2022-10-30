@@ -7,5 +7,5 @@ control-fsm-simulation:
 controller-simulation:
 	gcc -o controller-simulation ./controller/controller_simulation.c ./motor/motor.c ./controller/controller.c
 
-system-simulation:
-	gcc -o system-simulation ./system_simulation.c ./motor/motor.c ./controller/controller.c ./fsm/control_fsm.c
+hil-simulation:
+	gcc -o hil-simulation ./hil_simulation.c ./motor/motor.c ./controller/controller.c ./fsm/control_fsm.c
