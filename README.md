@@ -45,3 +45,4 @@ Pengaturan simulasi dapat diubah dengan mengganti nilai variabel-variabel beriku
 - SIM_DURATION (jumlah sampel maksimal dalam simulasi)
 - SIM_LOG_FILE_NAME (nilai default LOG_FILE)
 - SIM_PORT (nilai default PORT)
+- SIM_REFRESH_RATE (jumlah sampel untuk memperbarui display)

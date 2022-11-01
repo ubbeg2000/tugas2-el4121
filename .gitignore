@@ -1,5 +1,8 @@
 *.exe
 *.csv
+*.docx
+*.tmp
+*.png
 .vscode
 __pycache__
 venv

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from motor.motor import motor, TS
 
 # simulation settings
-SIM_WINDOW_WIDTH = 1000
+SIM_WINDOW_WIDTH = 2000
 SIM_DURATION = 10000
 SIM_LOG_FILE_NAME = "hil_log.csv"
 SIM_PORT = "COM8"
@@ -125,5 +125,6 @@ while i < SIM_DURATION:
         break
 
 print("simulation finished")
+fig.savefig(f"{SIM_LOG_FILE_NAME}.png")
 esp.close()
 f.close()

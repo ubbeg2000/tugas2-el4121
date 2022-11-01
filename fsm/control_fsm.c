@@ -4,11 +4,26 @@ void control_fsm(int *state, int *cnt, int input_open, int input_close, float sp
 {
     switch (*state)
     {
+    case DOOR_CLOSE:
+    {
+        if (input_open == 1)
+        {
+            *state = ACC_UP_MAX;
+            *output = 0;
+        }
+        else if (input_close == 1)
+        {
+            *state = DOOR_CLOSE;
+            *output = 0;
+        }
+        break;
+    }
     case DOOR_OPEN:
     {
         if (input_close == 1)
         {
             *state = ACC_DOWN_MIN;
+            *output = 0;
         }
         else
         {
@@ -32,21 +47,6 @@ void control_fsm(int *state, int *cnt, int input_open, int input_close, float sp
         }
         break;
     }
-    case DOOR_CLOSE:
-    {
-        if (input_open == 1)
-        {
-            *state = ACC_UP_MAX;
-            *cnt = 50;
-            *output = 0;
-        }
-        else if (input_close == 1)
-        {
-            *state = DOOR_CLOSE;
-            *output = 0;
-        }
-        break;
-    }
     case DOOR_OPENING:
     {
         if (position < OPEN_TH)
@@ -55,7 +55,6 @@ void control_fsm(int *state, int *cnt, int input_open, int input_close, float sp
         }
         else
         {
-            *cnt = 50;
             *state = ACC_DOWN_0;
         }
         break;
@@ -136,9 +135,7 @@ void control_fsm(int *state, int *cnt, int input_open, int input_close, float sp
             *state = DOOR_CLOSING;
             *output = MIN_SPEED;
         }
-        {
-            break;
-        }
+        break;
     }
     default:
         break;
